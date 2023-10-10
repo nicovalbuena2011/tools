@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load static %}
+<!-- Bloque que define el titulo  -->
+{% block titulo %}
+    Home
+{% endblock titulo %}
+
+
+<!-- Bloque que trae el cuerpo  -->
+{% block body %}
+
+{% include 'includes/nav.html' %}
+
+<div class="row " style="margin-top: 100px; margin-left: 40px;">
+    <div class="col-lg-5">
+        <div class="card p-5">
+            <div class="car-body">
+                <h5 class="card-title">Seleccione la fecha de inicio y terminación de cada contrato</h5>
+                <form method="POST" class="m-2" >
+                    {% csrf_token %}                  
+                    {{ formset.management_form }}
+                    
+                    {% for form in formset %}
+                        <div class="card m-2">
+                            <div class="d-flex" id="contenedor">
+                                
+                                <div class="p-2" >
+                                    <label for="{{ form.fecha_inicio.id_for_label }}" class="form-label">
+                                        Fecha <strong>inicio</strong> contrato {{ forloop.counter }}
+                                    </label>
+                                    {{ form.fecha_inicio }}
+                                </div>
+                                <div class="p-2">
+                                    <label for="{{ form.fecha_fin.id_for_label }}" class="form-label">
+                                        Fecha <strong>fin</strong> contrato {{ forloop.counter }}
+                                    </label>
+                                    {{ form.fecha_fin }}
+                                </div>
+                            </div>
+                        </div>                       
+                    {% endfor %}    
+                    
+                    <div class="d-flex justify-content-between">
+                        <button type="submit" class="btn btn-success mt-2">Validar Experiencia</button>
+                    </div>
+                    
+                </form>
+                <a href="{% url 'calculadora:welcome' %}">
+                    <button  class="btn btn-danger m-2">Atrás</button>
+
+                </a>
+
+        
+            </div>
+        
+        </div>
+    </div>
+
+    
+    {% if dias %}     
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    La persona tiene <strong>{{meses}}</strong> meses con <strong>{{dias}}</strong> dias de Experiencia.
+                </div>
+            </div>
+        </div>
+    {% endif %}
+
+    {% if errors %}
+        
+        <div class="col-lg-4">
+
+            <div class="alert alert-warning">
+                <h5>Se ha detectado un error:</h5>
+                <ol>
+                    <li>Recuerda que la fecha de inicio de un contrato no pueder ser mayor a la fecha de terminación, por favor corrigelo.</li>
+                    
+                </ol>
+            </div>
+
+        </div>
+    {% endif %}
+        
+
+</div>
+
+{% endblock body %}

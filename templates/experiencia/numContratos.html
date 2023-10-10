@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+<!-- Bloque que define el titulo  -->
+{% block titulo %}
+    Home
+{% endblock titulo %}
+
+
+<!-- Bloque que trae el cuerpo  -->
+{% block body %}
+
+{% include 'includes/nav.html' %}
+<div class="container">
+
+    <div class="row " style="margin-top: 100px;">
+        <div class="col-lg-5">
+            <div class="card p-5">
+                <div class="card-body">
+                    <h5 class="card-title ">Seleccione el numero de contratos a validar:</h5>
+                    <form  method="POST">
+                        {% csrf_token %}
+                        {{form.select_contratos}}
+                        <button class="btn btn-primary mt-4" type="submit">Aceptar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="alert alert-info">
+                <h5>Instrucciones:</h5>
+                <ol>
+                    <li>Seleccione el número de contratos a revisar para la experiencia.</li>
+                    <li>Recuerde que la fecha de terminación de un contrato no debe ser mayor que la de inicio.</li>
+                    <li>Evite colocar fechas que se solapen; si es necesario, ajuste las fechas para evitar coincidencias.</li>
+                </ol>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+{% endblock body %}

@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+<!-- Bloque que define el titulo  -->
+{% block titulo %}
+    Home
+{% endblock titulo %}
+
+
+<!-- Bloque que trae el cuerpo  -->
+{% block body %}
+
+<style>
+       
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: #3498db;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .container {
+        text-align: center;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .button {
+        padding: 15px 30px;
+        background-color: #3498db;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 18px;
+        transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+        background-color: #2980b9;
+    }
+</style>
+
+
+    <header>
+        <h1>Bienvenido a Contratación Tools</h1>
+        <p>Tu asistente para Contratación</p>
+    </header>
+
+    <div class="container">
+        <h2>Selecciona una herramienta:</h2>
+        <div class="button-container">
+            <a href="{% url 'calculadora:welcome' %}" class="button">calculadora de Experiencia</a>
+            <!-- Agrega más botones aquí para tus otras herramientas -->
+        </div>
+    </div>
+
+
+{% endblock body %}
