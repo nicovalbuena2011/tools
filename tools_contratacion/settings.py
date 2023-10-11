@@ -90,7 +90,7 @@ WSGI_APPLICATION = 'tools_contratacion.wsgi.application'
 
 # Utiliza dj_database_url para cargar la variable DATABASE_URL
 DATABASES = {
-    'default': dj_database_url.config(default='postgresql://postgres:ixvULdNus3Dq76MrLTkF@containers-us-west-82.railway.app:7798/railway')
+    'default': dj_database_url.config(default='postgresql://postgres:7hqTBglkTGLxUlhJ1LEj@containers-us-west-155.railway.app:7336/railway')
 }
 
 
