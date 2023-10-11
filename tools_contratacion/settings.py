@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 import os
 from pathlib import Path
+import dj_database_url
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -82,6 +84,14 @@ WSGI_APPLICATION = 'tools_contratacion.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+
+# DATABASES['default'] = dj_database_url.config(conn_max_age=600,ssl_require=True)
+
+
+# Utiliza dj_database_url para cargar la variable DATABASE_URL
+DATABASES = {
+    'default': dj_database_url.config(default='postgresql://postgres:ixvULdNus3Dq76MrLTkF@containers-us-west-82.railway.app:7798/railway')
+}
 
 
 # Password validation
