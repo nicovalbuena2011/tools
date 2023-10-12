@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #locale apps
     'aplications.calculadora_Experiencia',
+    'aplications.tabla_honorarios',
 ]
 
 MIDDLEWARE = [

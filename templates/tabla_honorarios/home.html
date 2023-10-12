@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+<!-- Bloque que define el titulo  -->
+{% block titulo %}
+    Home
+{% endblock titulo %}
+
+
+<!-- Bloque que trae el cuerpo  -->
+{% block body %}
+
+{% include 'includes/nav.html' %}
+
+
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-body">
+
+                    <div class="card-title">
+                        <h4>
+                            Calculo de Honorarios
+                        </h4>
+                    </div>
+
+                    <form method="POST">
+                        {% csrf_token %}
+                        {% if form.input_experiencia.errors %}
+
+                        
+                        <div class="alert alert-danger">
+                            <strong>Error:</strong> Por favor, corrija la experiencia.
+                                <ul>
+                                
+                                    <li>{{ form.input_experiencia.errors.0 }}</li>
+                                    
+                                    
+                                </ul>
+                            </div>
+                        {% endif %}
+
+                        <label class="form-label" >Seleccione el perfil profesional: </label>
+                        {{form.select_perfil}}
+
+                        <label class="form-label">Ingrese la experiencia en <strong>meses</strong></label>
+                        {{form.input_experiencia}}
+
+                        <button type="submit" class="btn btn-primary">Aceptar</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock body %}
