@@ -11,14 +11,17 @@
 
 {% include 'includes/nav.html' %}
 
-<div class="row" style="margin-top: 100px;">
+<div class="row" style="margin-top: 100px; margin-left: 60px;">
     <div class="col-lg-4">
 
         <div class="card">
             <div class="card-body">
               <h5 class="card-title">Perfil: {{ perfil }}</h5>
               <p class="card-text">Experiencia: {{ experiencia }} méses</p>
-              <p class="card-text">Sueldo: ${{ salario }}</p>
+              <p class="card-text" style="color: green;">Sueldo: ${{ salario }}</p>
+              <a href="{% url 'honorarios:inicio' %}">
+                  <button class="btn btn-info">Regresar</button>
+              </a>
             </div>
         </div>
 
