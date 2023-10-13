@@ -71,56 +71,56 @@ def validar_honorario(perfil,experiencia):
     
     honorarios_mensuales = [{
         'perfil': 'Auxiliar I',
-        'desde': 1067000,
-        'hasta': 1408000,
+        'desde': 1148359,
+        'hasta': 1515360,
         'exp-inicial': 6,
         'exp-final': 12
     },{
         'perfil': 'Auxiliar II',
-        'desde': 1409000,
-        'hasta': 1663000,
+        'desde': 1516436,
+        'hasta': 1789804,
         'exp-inicial': 13,
         'exp-final': 18
     },{
         'perfil': 'Técnico I',
-        'desde': 1664000,
-        'hasta': 1921000,
+        'desde': 1790880,
+        'hasta': 2067476,
         'exp-inicial': 0,
         'exp-final': 11
     },{
         'perfil': 'Técnico II',
-        'desde': 1922000,
-        'hasta': 2305000,
+        'desde': 2068553,
+        'hasta': 2480756,
         'exp-inicial': 12,
         'exp-final': 18
     },{
         'perfil': 'Profesional I',
-        'desde': 2306000,
-        'hasta': 2946000,
+        'desde': 2481833,
+        'hasta': 3170633,
         'exp-inicial': 0,
         'exp-final': 12
     },{
         'perfil': 'Profesional II',
-        'desde': 2947000,
-        'hasta': 3586000,
+        'desde': 3171709,
+        'hasta': 3859433,
         'exp-inicial': 13,
         'exp-final': 24
     },{
         'perfil': 'Profesional Especializado I',
-        'desde': 3587000,
-        'hasta': 4354000,
+        'desde': 3860509,
+        'hasta': 4685993,
         'exp-inicial': 0,
         'exp-final': 12
     },{
         'perfil': 'Profesional Especializado II',
-        'desde': 4355000,
-        'hasta': 5253000,
+        'desde': 4572750,
+        'hasta': 5653541,
         'exp-inicial': 13,
         'exp-final': 24
     },{
         'perfil': 'Profesional Especializado III',
-        'desde': 5254000,
-        'hasta': 5892000,
+        'desde': 5516700,
+        'hasta': 6341265,
         'exp-inicial': 25,
         'exp-final': 48
     }]
