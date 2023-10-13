@@ -30,5 +30,17 @@ class HonorariosForm(forms.Form):
         if select_pefil == '1' and (int(input_experiencia) > 18 or int(input_experiencia) < 6):
            self.add_error('input_experiencia','Un Auxiliar no puede tener esa experiencia, recuerde que la experiencia para Auxiliares es de 6 a 18 meses.')
 
+        elif select_pefil == '2' and (int(input_experiencia) > 18 or int(input_experiencia) < 0):
+            self.add_error('input_experiencia','Un Técnico no puede tener esa experiencia, recuerde que la experiencia para Técnicos es de 0 a 18 meses.')
+
+        
+        elif select_pefil == '3' and (int(input_experiencia) > 24 or int(input_experiencia) < 0):
+            self.add_error('input_experiencia','Un Profesional no puede tener esa experiencia, recuerde que la experiencia para Profesionales es de 0 a 24 meses.')
+
+        
+        elif select_pefil == '4' and (int(input_experiencia) < 0):
+            self.add_error('input_experiencia','Un Profesional Especializado no puede tener esa experiencia, recuerde que la experiencia para Profesionales Especializados es de 0 a 48 o más meses.')
 
         return cleaned_data
+
+

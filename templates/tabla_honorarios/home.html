@@ -15,7 +15,7 @@
 
 <div class="container">
 
-    <div class="row">
+    <div class="row" style="margin-top: 100px;">
         <div class="col-lg-4">
             <div class="card">
                 <div class="card-body">
@@ -48,12 +48,49 @@
                         <label class="form-label">Ingrese la experiencia en <strong>meses</strong></label>
                         {{form.input_experiencia}}
 
-                        <button type="submit" class="btn btn-primary">Aceptar</button>
+                        <button type="submit" class="btn btn-primary mt-2">Aceptar</button>
 
                     </form>
                 </div>
             </div>
         </div>
+
+        <div class="col-lg-4">
+
+            <h3>Tabla de guia de Experiencias vs Perfil</h3>
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr class="text-center">
+                        
+                        <th>Perfil</th>
+                        <th colspan="2">Experiencia General (Desde - Hasta) meses</th>
+                          
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="text-center">
+                      <td>Auxiliar</td>
+                      <td>0 - 18</td>
+                    </tr>
+                    <tr class="text-center">
+                        <td>Técnico</td>
+                        <td>0 - 18</td>
+                    </tr>
+                    <tr class="text-center">
+                        <td>Profesional</td>
+                        <td>0 - 24</td>
+                    </tr>
+                    <tr class="text-center">
+                        <td>Profesional Especializado</td>
+                        <td>13 - 48 o más</td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+
+
     </div>
 </div>
 
