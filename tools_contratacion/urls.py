@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('aplications.calculadora_Experiencia.urls')),
     path('',include('aplications.home.urls')),
+    path('',include('aplications.tabla_honorarios.urls')),
 ]
 
 if settings.DEBUG:

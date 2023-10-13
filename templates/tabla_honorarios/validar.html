@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+<!-- Bloque que define el titulo  -->
+{% block titulo %}
+    Home
+{% endblock titulo %}
+
+
+<!-- Bloque que trae el cuerpo  -->
+{% block body %}
+
+{% include 'includes/nav.html' %}
+
+<div class="row" style="margin-top: 100px;">
+    <div class="col-lg-4">
+
+        <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Perfil: {{ perfil }}</h5>
+              <p class="card-text">Experiencia: {{ experiencia }} méses</p>
+              <p class="card-text">Sueldo: ${{ salario }}</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+  
+
+{% endblock body %}
